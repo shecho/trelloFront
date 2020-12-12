@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Nav from "./components/nav/nav";
 import Login from "./components/login/login";
 import Home from "./components/home/home";
-import Board from "./components/boards/board";
+import Boards from "./components/boards/boards";
 import Register from "./components/register/register";
 import {
   BrowserRouter as Router,
@@ -34,8 +34,7 @@ function App() {
             </Route>
 
             <Route exact path="/home" component={Home} />
-            <Route exact path="/board" component={Board} />
-            {/* <Route exact path="/login" component={Login} /> */}
+            <Route exact path="/boards" component={Boards} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/" component={Home} />
           </Switch>
