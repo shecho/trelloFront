@@ -21,16 +21,7 @@ const Boards = () => {
       <div className="container">
         {boards.map((board) => {
           return (
-            <Board board={board} id={board.id}/>
-            
-            // <div className="col-md-4 m-2 text-center" key={board.id}>
-            //   <div className="card bg-dark text-light">
-            //     <div className="card-body">
-            //       <h5 className="card-title"> {board.name}</h5>
-            //       <p> {board.description}</p>
-            //     </div>
-            //   </div>
-            // </div>
+            <Board board={board} key={board.id}/>
           );
         })}
       </div>
