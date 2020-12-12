@@ -17,7 +17,7 @@ const Boards = () => {
   };
 
   return (
-    <div className="App">
+    <div className="">
       <div className="container">
         {boards.map((board) => {
           return (
