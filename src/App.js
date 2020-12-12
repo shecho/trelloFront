@@ -14,9 +14,10 @@ import {
   Redirect,
 } from "react-router-dom";
 function App() {
-  const [loginStatus, setLoginStatus] = useState(false);
+  const [loginStatus, setLoginStatus] = useState(true);
   const handleLogStatus = (status) => {
-    setLoginStatus(() => false);
+    setLoginStatus(() => !loginStatus);
+    console.log(loginStatus);
   };
   return (
     <Router>
@@ -29,7 +30,7 @@ function App() {
           <Switch>
             <Route exact path="/login">
               {loginStatus === true ? (
-                <Redirect from="/login" to="/board" />
+                <Redirect from="/login" to="/boards" />
               ) : (
                 <Login handleLogStatus={handleLogStatus} />
               )}

@@ -6,7 +6,6 @@ function User(){
     getUser();
   }, []);
   const getUser = async() => {
- ``   
     let url = `http://127.0.0.1:8000/users/api/v1/3/`;
 
     let response = await fetch(url);
