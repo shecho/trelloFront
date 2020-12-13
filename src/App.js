@@ -6,7 +6,7 @@ import Home from "./components/home/home";
 import Boards from "./components/boards/boards";
 import Register from "./components/register/register";
 import User from "./components/users/user";
-
+import SortableContainer from "./components/sortableContainer/sortableComponent"
 import {
   BrowserRouter as Router,
   Route,
@@ -39,7 +39,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/user" component={User} />
             <Route exact path="/boards" component={Boards} />
-            <Route exact path="/test" component={User} />
+            <Route exact path="/test" component={SortableContainer} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/" component={Home} />
           </Switch>
