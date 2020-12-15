@@ -1,28 +1,30 @@
-import React, {useState} from "react"
-import { SortableContainer, SortableElement } from 'react-sortable-hoc';
+import React, {useState, useffect} from "react"
 import arrayMove from 'array-move';
 
-
-const  SortableItem  = SortableElement(({ value }) => <p>{value}</p>);
-
-const SortableList = SortableContainer(({ items }) => {
-    return (
-
-        <div className="card bg-dark text-light m-5 p-5">
-            <ul>
-                {items.map((value, index) => (
-                    <SortableItem key={`item-${value}`} index={index} value={value} />
-                ))}
-            </ul>
-        </div>
-    );
-});
-
+import SortableList from '../sortableContainer/sortableList'
+import SortableCard from '../sortableContainer/sortableCard'
 
 const  BoardDetail= ()=>{
+const [list, setList] = useState(initialState)
+  useEffect(() => {
+    getList();
+  }, []);
+  const getList = async() => {
+    
+    let url = "http://127.0.0.1:8000/lists/";
+
+    let response = await fetch(url);
+    console.log(response);
+    let res = await response.json();
+    console.log(res);
+    setList(() => res);
+    console.log(list)
+  }
+
+
   return(
     <div>
-      <p>Project name</p>
+      <SortableList/>
     </div>
     )
 }
