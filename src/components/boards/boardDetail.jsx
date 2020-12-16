@@ -1,8 +1,8 @@
 import React, {useState, useffect} from "react"
-import arrayMove from 'array-move';
+// import arrayMove from 'array-move';
 
-import SortableList from '../sortableContainer/sortableList'
-import SortableCard from '../sortableContainer/sortableCard'
+// import SortableList from '../sortableContainer/sortableList'
+// import SortableCard from '../sortableContainer/sortableCard'
 
 const  BoardDetail= ()=>{
 const [list, setList] = useState(initialState)
@@ -24,7 +24,7 @@ const [list, setList] = useState(initialState)
 
   return(
     <div>
-      <SortableList/>
+
     </div>
     )
 }

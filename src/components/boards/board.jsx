@@ -4,7 +4,6 @@ const Board = (props) => {
   const { id, description, name, members } = props.board;
   return (
     <div className="text-center" key={id}>
-      <div className="col-md-4 m-2 text-center">
         <div className="card bg-dark text-light">
           <div className="d-flex justify-content-end p-2 ">
             <i className="fa fa-ellipsis-h " aria-hidden="true" />
@@ -27,7 +26,6 @@ const Board = (props) => {
               </button>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
