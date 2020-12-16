@@ -15,9 +15,11 @@ const Boards = () => {
     setBoards(() => res.results);
   };
 
+
   return (
-    <div className="">
-      <div className="container">
+    <div className=" w-100" style={{height:'100vh',
+      overflowX:'hidden'}}>
+      <div className="">
         {boards.map((board) => {
           return (
             <Board board={board} key={board.id}/>

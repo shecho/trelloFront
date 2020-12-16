@@ -3,7 +3,7 @@ import React from "react";
 const Board = (props) => {
   const { id, description, name, members } = props.board;
   return (
-    <div className="container text-center" key={id}>
+    <div className="text-center" key={id}>
       <div className="col-md-4 m-2 text-center">
         <div className="card bg-dark text-light">
           <div className="d-flex justify-content-end p-2 ">
