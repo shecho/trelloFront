@@ -8,12 +8,11 @@ const Boards = () => {
 
   const getBoards = async () => {
     let url = "http://127.0.0.1:8000/boards/";
-
     let response = await fetch(url);
     console.log(response);
     let res = await response.json();
-    console.log(res);
-    setBoards(() => res);
+    console.log(res.results);
+    setBoards(() => res.results);
   };
 
   return (
