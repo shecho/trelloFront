@@ -17,8 +17,7 @@ const Boards = () => {
 
 
   return (
-    <div className=" w-100" style={{height:'100vh',
-      overflowX:'hidden'}}>
+    <div className=" w-100" style={{height:'100vh', overflowX:'hidden'}}>
       <div className="">
         {boards.map((board) => {
           return (

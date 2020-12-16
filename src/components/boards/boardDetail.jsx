@@ -1,32 +1,32 @@
-import React, {useState, useffect} from "react"
-// import arrayMove from 'array-move';
+import React, { useState, useEffect } from "react";
+import List from '../lists/list'
 
-// import SortableList from '../sortableContainer/sortableList'
-// import SortableCard from '../sortableContainer/sortableCard'
-
-const  BoardDetail= ()=>{
-const [list, setList] = useState(initialState)
+const BoardDetail = () => {
+  const [list, setList] = useState([]);
   useEffect(() => {
     getList();
   }, []);
-  const getList = async() => {
-    
-    let url = "http://127.0.0.1:8000/lists/";
-
+  const getList = async () => {
+    let url = "http://127.0.0.1:8000/list/";
     let response = await fetch(url);
     console.log(response);
     let res = await response.json();
-    console.log(res);
-    setList(() => res);
-    console.log(list)
-  }
+    console.log(res.results);
+    setList(() => res.results);
+    console.log(list);
+  };
 
-
-  return(
-    <div>
-
+  return (
+    <div className="" style={{height:'100vh', overflowX:'hidden'}}>
+      <div className="">
+        {list.map((list) => {
+          return (
+            <List list={list} key={list.id}/>
+          );
+        })}
+      </div>
     </div>
-    )
-}
+  );
+};
 
-export default BoardDetail
+export default BoardDetail;
