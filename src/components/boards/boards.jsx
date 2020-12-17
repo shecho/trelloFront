@@ -28,7 +28,7 @@ const Boards = () => {
         <div className="child_cards">
         {boards.map((board) => {
           return (
-            <Board board={board} key={board.id}/>
+            <Board board={board} key={board.id} getBoards={getBoards}/>
           );
         })}
         </div>

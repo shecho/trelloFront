@@ -4,6 +4,14 @@ import "./boards.css";
 
 const Board = (props) => {
   const { id, description, name, members } = props.board;
+
+  const deleteBoard = async (id) => {
+    let url = `http://127.0.0.1:8000/boards/${id}`;
+    let request = await fetch(url, {method: "DELETE",});
+    console.log(request);
+    console.log(id);
+    props.getBoards()
+  };
   const activeStyles = {
     color: "rgb(83, 75, 87)",
   };
@@ -12,7 +20,7 @@ const Board = (props) => {
       <div className="child_boards">
         <i className="fa fa-heart-o " aria-hidden="true" />
         <div className="d-flex justify-content-end p-2 ">
-          <i className="fa fa-trash text-danger" aria-hidden="true" />
+          <i className="fa fa-trash text-danger" aria-hidden="true" onClick={()=>deleteBoard(id)}/>
         </div>
 
         <div className="d-flex justify-content-end p-2 ">
