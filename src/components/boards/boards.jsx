@@ -18,11 +18,13 @@ const Boards = () => {
 
   return (
     <div className="cards">
+        <div className="child_cards">
         {boards.map((board) => {
           return (
             <Board board={board} key={board.id}/>
           );
         })}
+        </div>
     </div>
   );
 
