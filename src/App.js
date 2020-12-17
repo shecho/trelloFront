@@ -13,6 +13,8 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import BoardDetail from "./components/boards/boardDetail";
+import SortableComponent from "./components/sortableContainer/sortableComponent";
 function App() {
   const [loginStatus, setLoginStatus] = useState(true);
   const handleLogStatus = (status) => {
@@ -38,9 +40,9 @@ function App() {
 
             <Route exact path="/home" component={Home} />
             <Route exact path="/user" component={User} />
-            <Route path="/boards" component={Boards} />
-            <Route path="/boards/${id}" component={Boards} />
-            <Route exact path="/test" component={SortableContainer} />
+            <Route exact path="/boards" component={Boards} />
+            <Route path="/boards/:id" component={BoardDetail} />
+            <Route exact path="/test" component={SortableComponent} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/" component={Home} />
           </Switch>
