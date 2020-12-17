@@ -45,7 +45,11 @@ function App() {
               <Route exact path="/user" component={User} />
               <Route exact path="/boards" component={Boards} />
               <Route exact path="/boards/:id" component={BoardDetail} />
-              <Route exact path="/boards/:id/list" component={BoardDetail} />
+              <Route
+                exact
+                path="/boards/:id/lis"
+                component={SortableComponent}
+              />
               <Route exact path="/test" component={SortableComponent} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/" component={Home} />

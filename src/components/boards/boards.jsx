@@ -15,6 +15,13 @@ const Boards = () => {
     setBoards(() => res.results);
   };
 
+  // const getBoard = async (id) => {
+  //   let url = `http://127.0.0.1:8000/boards/${id}`;
+  //   let response = await fetch(url);
+  //   let res = await response.json();
+  //   console.log(res.results);
+  //   setBoards(() => res.results);
+  // };
 
   return (
     <div className="cards">

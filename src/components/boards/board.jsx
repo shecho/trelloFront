@@ -1,22 +1,26 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./boards.css";
 const Board = (props) => {
   const { id, description, name, members } = props.board;
+  const activeStyles = {
+    color: "rgb(83, 75, 87)",
+  };
   return (
     <div className="boards" key={id}>
       <div className="child_boards">
-        <div className="d-flex justify-content-end p-2 ">
           <i className="fa fa-heart-o " aria-hidden="true" />
-        </div>
-        <div className="d-flex justify-content-end p-2 ">
-          <i className="fa fa-plus-circle text-success " aria-hidden="true" />
-        </div>
         <div className="d-flex justify-content-end p-2 ">
           <i className="fa fa-trash text-danger" aria-hidden="true" />
         </div>
 
+
         <div className="d-flex justify-content-end p-2 ">
-          <i className="fa fa-ellipsis-h " aria-hidden="true" />
+          <NavLink  to={`boards/${id}`} activeStyle={activeStyles}>
+            <li>
+              <i className="fa fa-ellipsis-h " aria-hidden="true" id={id} />
+            </li>
+          </NavLink>
         </div>
         <div className="card-body">
           <h5 className="card-title"> {name}</h5>

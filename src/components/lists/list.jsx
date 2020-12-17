@@ -5,7 +5,9 @@ const List = (props) => {
   return (
     <div className="text-center" key={id}>
       <div className="card bg-dark text-light">
-          <h5 className="card-title "> <span className='dx-2'> N°{position}</span> {name}</h5>
+        <h5 className="card-title ">
+          <span className="dx-2"> N°{position}</span> {name}
+        </h5>
         <div className="d-flex justify-content-center p-2 ">
           <div className="m-2">
             <i className="fa fa-plus-circle text-success" aria-hidden="true" />
@@ -18,32 +20,11 @@ const List = (props) => {
           </div>
         </div>
         <div className="card-body">
-          
           <div className="justify-content-center ">
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
-            <div>
-            card
-            </div>
+            <div>card</div>
+            <div>card</div>
+            <div>card</div>
+            <div>card</div>
           </div>
         </div>
       </div>
