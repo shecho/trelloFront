@@ -1,16 +1,17 @@
 import React from "react";
-
+import './boards.css'
 const Board = (props) => {
   const { id, description, name, members } = props.board;
   return (
-    <div className="text-center" key={id}>
-        <div className="card bg-dark text-light">
+    <div className="boards" key={id}>
+
           <div className="d-flex justify-content-end p-2 ">
             <i className="fa fa-ellipsis-h " aria-hidden="true" />
           </div>
           <div className="d-flex justify-content-end p-2 ">
             <i className="fa fa-trash text-danger" aria-hidden="true" />
           </div>
+
           <div className="card-body">
             <h5 className="card-title"> {name}</h5>
             <p> {description}</p>
@@ -26,8 +27,8 @@ const Board = (props) => {
               </button>
             </div>
           </div>
+
       </div>
-    </div>
   );
 };
 

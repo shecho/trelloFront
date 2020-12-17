@@ -1,0 +1,7 @@
+**{margin:0;padding:0;box-sizing:border-box;}
+
+.cards{overflow: hidden;
+    background:linear-gradient(to bottom, #010113, #101061, #040425);
+    border-radius:.5rem;
+    box-shadow:0 0 8px 3px #a3a3a380;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Board from './board'
+import './boards.css'
 const Boards = () => {
   let [boards, setBoards] = useState([]);
   useEffect(() => {
@@ -16,7 +17,7 @@ const Boards = () => {
 
 
   return (
-    <div className=" w-100" style={{height:'100vh', overflowX:'hidden'}}>
+    <div className="cards">
       <div className="">
         {boards.map((board) => {
           return (
