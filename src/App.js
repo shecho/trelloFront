@@ -29,31 +29,28 @@ function App() {
         </div>
 
         <div className="appgeneral">
-          <div className="sidebar">
-            sidebar
-          </div>
+          <div className="sidebar">sidebar</div>
 
           <div className="body_cards">
-          <Switch>
-            <Route exact path="/login">
-              {loginStatus === true ? (
-                <Redirect from="/login" to="/boards" />
-              ) : (
-                <Login handleLogStatus={handleLogStatus} />
-              )}
-            </Route>
+            <Switch>
+              <Route exact path="/login">
+                {loginStatus === true ? (
+                  <Redirect from="/login" to="/boards" />
+                ) : (
+                  <Login handleLogStatus={handleLogStatus} />
+                )}
+              </Route>
 
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/user" component={User} />
-            <Route exact path="/boards" component={Boards} />
-            <Route exact path="/boards/:id" component={BoardDetail} />
-            <Route exact path="/boards/:id/list" component={BoardDetail} />
-            <Route exact path="/test" component={SortableComponent} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/" component={Home} />
-          </Switch>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/user" component={User} />
+              <Route exact path="/boards" component={Boards} />
+              <Route exact path="/boards/:id" component={BoardDetail} />
+              <Route exact path="/boards/:id/list" component={BoardDetail} />
+              <Route exact path="/test" component={SortableComponent} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/" component={Home} />
+            </Switch>
           </div>
-
         </div>
       </div>
     </Router>
