@@ -23,8 +23,6 @@ const List = (props) => {
           <div className="justify-content-center ">
             <div>card</div>
             <div>card</div>
-            <div>card</div>
-            <div>card</div>
           </div>
         </div>
       </div>
