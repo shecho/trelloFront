@@ -1,7 +1,7 @@
 import React from "react";
 
 const List = (props) => {
-  const { id, position, name, members } = props.list;
+  const { id, position, name } = props.list;
   return (
     <div className="text-center" key={id}>
       <div className="card bg-dark text-light">
