@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./boards.css";
+
 const Board = (props) => {
   const { id, description, name, members } = props.board;
   const activeStyles = {
@@ -9,14 +10,13 @@ const Board = (props) => {
   return (
     <div className="boards" key={id}>
       <div className="child_boards">
-          <i className="fa fa-heart-o " aria-hidden="true" />
+        <i className="fa fa-heart-o " aria-hidden="true" />
         <div className="d-flex justify-content-end p-2 ">
           <i className="fa fa-trash text-danger" aria-hidden="true" />
         </div>
 
-
         <div className="d-flex justify-content-end p-2 ">
-          <NavLink  to={`boards/${id}`} activeStyle={activeStyles}>
+          <NavLink to={`boards/${id}`} activeStyle={activeStyles}>
             <li>
               <i className="fa fa-ellipsis-h " aria-hidden="true" id={id} />
             </li>
