@@ -29,7 +29,10 @@ function App() {
         </div>
 
         <div className="appgeneral">
-          <div className="sidebar">sidebar</div>
+          <div className="sidebar">
+            <span className="mx-2"> Add List</span>
+            <i className="fa fa-plus-circle text-success" aria-hidden="true" />
+          </div>
 
           <div className="body_cards">
             <Switch>
