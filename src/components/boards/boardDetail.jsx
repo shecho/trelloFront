@@ -1,4 +1,3 @@
-import React, {useState, useffect} from "react"
 import './boards.css'
 // import arrayMove from 'array-move';
 import React, { useState, useEffect } from "react";
@@ -20,14 +19,12 @@ const BoardDetail = () => {
   };
 
   return (
-    <div className="" style={{height:'100vh', overflowX:'hidden'}}>
-      <div className="">
+    <div className="blanco">
         {list.map((list) => {
           return (
             <List list={list} key={list.id}/>
           );
         })}
-      </div>
     </div>
   );
 };
