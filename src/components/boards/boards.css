@@ -24,8 +24,21 @@
 .boards{width:100%;height:auto;
     padding:1rem;}
 .child_boards{
-    border-radius:.5rem;
+    border-radius:.5rem;overflow: hidden;
     box-shadow:0 0 8px 3px #a3a3a380;
     background:linear-gradient(to bottom, #010113, #101061, #040425);}
+.head_boards{width:100%;height:auto;
+    background: #03587a,;
+    display:flex;justify-content:space-around;
+    align-items:center;
+    border-bottom:1px solid #5c5c5c;
+    padding:1rem;}
+.head_boards li{list-style:none;}
+.head_boards i{background: rgb(0, 82, 129);
+    cursor: pointer;;
+    border-radius:50%;padding:1rem;
+    transition:all .2s ease;;}
+.head_boards i:hover{background: rgb(1, 65, 102);
+    transform:scale(1.2) translateY(-3px);}
 
 .blanco{border:1px solid yellow;}
