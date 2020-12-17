@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "./boards.css";
 
 const Board = (props) => {
    const { id, description, name, members } = props.board;
-
+  let [favorite, setFavorite] = useState(false);
    const deleteBoard = async (id) => {
       let url = `http://127.0.0.1:8000/boards/${id}`;
       let request = await fetch(url, { method: "DELETE", });
@@ -12,6 +12,9 @@ const Board = (props) => {
       console.log(id);
       props.getBoards()
    };
+   const handelSetFavorite = () => {
+      setFavorite(()=>!favorite)
+   }
    const activeStyles = {
       color: "rgb(83, 75, 87)",
    };
@@ -20,7 +23,7 @@ const Board = (props) => {
          <div className="child_boards">
 
             <div className="head_boards">
-               <i className="fa fa-heart-o " aria-hidden="true" />
+               <i className={`fa fa-heart-o ${favorite ? 'text-danger': ""} `} aria-hidden="true" onClick={() => handelSetFavorite()} />
 
                <i className="fa fa-trash text-danger" aria-hidden="true" onClick={() => deleteBoard(id)} />
 
