@@ -1,4 +1,5 @@
 import React, {useState, useffect} from "react"
+import './boards.css'
 // import arrayMove from 'array-move';
 
 // import SortableList from '../sortableContainer/sortableList'
