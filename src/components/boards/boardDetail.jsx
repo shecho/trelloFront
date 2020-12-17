@@ -32,7 +32,7 @@ const BoardDetail = () => {
   };
 
   return (
-    <div className="blanco">
+    <div className="list">
         {list.map((list) => {
           return (
             <List list={list} key={list.id}/>

@@ -1,12 +1,15 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
-.cards{width:220px;height:auto;
+.cards{width:100%;height:auto;
     overflow: hidden;
-    background:linear-gradient(to bottom, #010113, #101061, #040425);
+    padding: 0 1rem;
+    display:flex;}
+.boards{width:100%;height:auto;}
+.child_boards{width:220px;height:auto;
     border-radius:.5rem;
+    margin:1rem auto;
     box-shadow:0 0 8px 3px #a3a3a380;
-}
+    background:linear-gradient(to bottom, #010113, #101061, #040425);}
 
-.boards{margin-top:1rem;}
 
 .blanco{border:1px solid yellow;}
