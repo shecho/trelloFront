@@ -23,12 +23,17 @@ function App() {
   };
   return (
     <Router>
-      <div claame="App">
-        <div className="">
+      <div className="App">
+        <div className="navigation">
           <Nav />
         </div>
 
-        <div className="row justify-content-center">
+        <div className="appgeneral">
+          <div className="sidebar">
+            sidebar
+          </div>
+
+          <div className="body_cards">
           <Switch>
             <Route exact path="/login">
               {loginStatus === true ? (
@@ -47,6 +52,8 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/" component={Home} />
           </Switch>
+          </div>
+
         </div>
       </div>
     </Router>

@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react";
 import './boards.css'
+
 // import arrayMove from 'array-move';
 import List from '../lists/list'
 
@@ -31,14 +32,12 @@ const BoardDetail = () => {
   };
 
   return (
-    <div className="" style={{height:'100vh', overflowX:'hidden'}}>
-      <div className="">
+    <div className="list">
         {list.map((list) => {
           return (
             <List list={list} key={list.id}/>
           );
         })}
-      </div>
     </div>
   );
 };

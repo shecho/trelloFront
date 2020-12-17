@@ -1,3 +1,19 @@
-body {
-  overflow: hidden;
+
+.appgeneral{width:100%;height:auto;
+    background:linear-gradient(to top, #1a243b, #182747, #06080e);}
+.appgeneral{width:100%;height:auto;
+    overflow: hidden;padding:3rem 0;
+    display:flex;}
+
+.sidebar{width:250px;height:auto;
+    background:linear-gradient(to bottom, #010113, #101061, #040425);
+    padding: 1rem;}
+@media only screen and (max-width:576px){
+    .sidebar{width:160px;height:auto;}
 }
+
+.body_cards{width:100%;height:auto;
+    padding:0;margin: 0;;}
+
+.list{width:100%;height:auto;
+    border:1px solid yellow;}
