@@ -8,25 +8,20 @@ const Board = (props) => {
 
   const addTofavorites = async () => {
     console.log("adding to favorites");
-    // let url = `http://127.0.0.1:8000/boards/${id}`;
-    // let data2= props.board
-    // let miFavotireList =  [...props.board.favorite, id]
-    // console.log(miFavotireList);
-    // let data = {
-    //   data2,
-    //   [favorite]: [...props.board.favorite, id],
-    // };
-    // console.log(data);
-    // let res = await fetch(url, {
-    //   method: "PATCH",
-    //   headers: {
-    //     "Content-Type": "application/json; charset=UTF-8",
-    //   },
-    //   body: JSON.stringify(data),
-    // });
+    let url = `http://127.0.0.1:8000/boards/${id}/favorite`;
 
-    // console.log(res);
-    // setFavorite(() => !favorite);
+    let data = {users:[id]}
+    console.log(data);
+    let res = await fetch(url, {
+      method: "POST",
+      headers:{
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify(data),
+    });
+
+    console.log(res);
+    setFavorite(() => !favorite);
   };
   const deleteBoard = async (id) => {
     let url = `http://127.0.0.1:8000/boards/${id}/`;
@@ -48,7 +43,7 @@ const Board = (props) => {
           <i
             className={`fa fa-heart-o ${favorite ? "text-danger" : ""} `}
             aria-hidden="true"
-            onClick={() => handelSetFavorite()}
+            onClick={() => addTofavorites()}
           />
 
           <i
