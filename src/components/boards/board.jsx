@@ -9,13 +9,15 @@ const Board = (props) => {
   const addTofavorites = async () => {
     let url = `http://127.0.0.1:8000/boards/${id}`;
     let data2= props.board
+    let miFavotireList =  [...props.board.favorite, id]
+    console.log(miFavotireList);
     let data = {
-      ...data2,
-      [favorite]: [...props.board.favorite, favorite],
+      data2,
+      [favorite]: [...props.board.favorite, id],
     };
     console.log(data);
     let res = await fetch(url, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
