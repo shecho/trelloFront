@@ -14,16 +14,11 @@ const BoardDetail = () => {
 
 
   const {id} = useParams()
-console.log(id);
-
   const getList = async () => {
     let url = `http://127.0.0.1:8000/boards/${id}`;
     let response = await fetch(url);
-    console.log(response);
     let res = await response.json();
-    console.log(res.list);
     setList(() => res.list);
-    console.log(list);
   };
   return (
     <div className="list">
