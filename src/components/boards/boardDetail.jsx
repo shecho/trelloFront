@@ -27,10 +27,9 @@ console.log(id);
   };
   return (
     <div className="list">
-      listas
-      {/* {list.map((list) => { */}
-      {/*   return <List list={list} key={list.id} />; */}
-      {/* })} */}
+      {list.map((list) => {
+        return <List list={list} key={list.id} />;
+      })}
     </div>
   );
 };
