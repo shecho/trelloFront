@@ -5,28 +5,32 @@ import "./boards.css";
 import List from "../lists/list";
 
 const BoardDetail = () => {
-  const [list, setList] = useState([]);
-  // const [cards, setCards] = useState([]);
-  useEffect(() => {
-    getList();
-  }, []);
+   const [list, setList] = useState([]);
+   // const [cards, setCards] = useState([]);
+   useEffect(() => {
+      getList();
+   }, []);
 
-  const getList = async () => {
-    let url = "http://127.0.0.1:8000/list/";
-    let response = await fetch(url);
-    console.log(response);
-    let res = await response.json();
-    console.log(res.results);
-    setList(() => res.results);
-    console.log(list);
-  };
-  return (
-    <div className="list">
-      {list.map((list) => {
-        return <List list={list} key={list.id} />;
-      })}
-    </div>
-  );
+   const getList = async () => {
+      let url = "http://127.0.0.1:8000/list/";
+      let response = await fetch(url);
+      console.log(response);
+      let res = await response.json();
+      console.log(res.results);
+      setList(() => res.results);
+      console.log(list);
+   };
+   return (
+      <div className="list">
+         <div className="child_list">
+            <div className="box_list">
+               {list.map((list) => {
+                  return <List list={list} key={list.id} />;
+               })}
+            </div>
+         </div>
+      </div>
+   );
 };
 
 export default BoardDetail;
