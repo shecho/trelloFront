@@ -4,16 +4,15 @@ import "./boards.css";
 
 const Board = (props) => {
   const { id, description, name, members } = props.board;
-  let [favorite, setFavorite] = useState(false);
+  let [favorite, setFavorite] = useState(props.board.favorite);
 
   const addTofavorites = async () => {
-    console.log("adding to favorites");
-    let url = `http://127.0.0.1:8000/boards/${id}/favorite`;
-
-    let data = {users:[id]}
+    // console.log("adding to favorites");
+    let url = `http://127.0.0.1:8000/boards/${id}/`;
+    let data = {favorite:[...props.board.favorite, 3]}
     console.log(data);
     let res = await fetch(url, {
-      method: "POST",
+      method: "PATCH",
       headers:{
         "Content-Type": "application/json; charset=UTF-8",
       },
@@ -36,12 +35,13 @@ const Board = (props) => {
   const activeStyles = {
     color: "rgb(83, 75, 87)",
   };
+  
   return (
     <div className="boards" key={id}>
       <div className="child_boards">
         <div className="head_boards">
           <i
-            className={`fa fa-heart-o ${favorite ? "text-danger" : ""} `}
+            className={`fa fa-heart-o ${members.includes(favorite) ? "text-danger" : ""} `}
             aria-hidden="true"
             onClick={() => addTofavorites()}
           />
