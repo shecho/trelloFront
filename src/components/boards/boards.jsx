@@ -19,7 +19,7 @@ const Boards = () => {
   return (
     <div className="cards">
         <div className="child_cards">
-        {boards.map((board) => {
+        {boards?.map((board) => {
           return (
             <Board board={board} key={board.id} getBoards={getBoards}/>
           );
