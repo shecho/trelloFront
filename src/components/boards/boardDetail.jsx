@@ -6,11 +6,11 @@ import {useParams} from 'react-router-dom'
 import List from "../lists/list";
 
 const BoardDetail = () => {
-  const [list, setList] = useState([]);
-  // const [cards, setCards] = useState([]);
-  useEffect(() => {
-    getList();
-  }, []);
+   const [list, setList] = useState([]);
+   // const [cards, setCards] = useState([]);
+   useEffect(() => {
+      getList();
+   }, []);
 
 
   const {id} = useParams()
