@@ -33,8 +33,7 @@ const Register = () => {
         className="form-box animated fadeInUp"
       >
         <h1 className="form-title">SignUp</h1>
-        <input name="name" type="text" placeholder="Name" />
-        <input name="lastname" type="text" placeholder="Lastname" />
+        <input name="name" type="text" placeholder="Username" />
         <input name="email" type="email" placeholder="Email" />
         <input name="password" type="password" placeholder="Password" />
         <button type="submit">

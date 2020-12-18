@@ -11,17 +11,10 @@ const Boards = () => {
     let url = "http://127.0.0.1:8000/boards/";
     let response = await fetch(url);
     let res = await response.json();
-    console.log(res.results);
-    setBoards(() => res.results);
+    // console.log(res);
+    setBoards(() => res);
   };
 
-  // const getBoard = async (id) => {
-  //   let url = `http://127.0.0.1:8000/boards/${id}`;
-  //   let response = await fetch(url);
-  //   let res = await response.json();
-  //   console.log(res.results);
-  //   setBoards(() => res.results);
-  // };
 
   return (
     <div className="cards">

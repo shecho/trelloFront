@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./boards.css";
+import {useParams} from 'react-router-dom'
 
 // import arrayMove from 'array-move';
 import List from "../lists/list";
@@ -11,20 +12,25 @@ const BoardDetail = () => {
     getList();
   }, []);
 
+
+  const {id} = useParams()
+console.log(id);
+
   const getList = async () => {
-    let url = "http://127.0.0.1:8000/list/";
+    let url = `http://127.0.0.1:8000/boards/${id}`;
     let response = await fetch(url);
     console.log(response);
     let res = await response.json();
-    console.log(res.results);
-    setList(() => res.results);
+    console.log(res.list);
+    setList(() => res.list);
     console.log(list);
   };
   return (
     <div className="list">
-      {list.map((list) => {
-        return <List list={list} key={list.id} />;
-      })}
+      listas
+      {/* {list.map((list) => { */}
+      {/*   return <List list={list} key={list.id} />; */}
+      {/* })} */}
     </div>
   );
 };

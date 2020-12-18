@@ -46,8 +46,8 @@ function App() {
 
               <Route exact path="/home" component={Home} />
               <Route exact path="/user" component={User} />
-              <Route exact path="/boards" component={Boards} />
               <Route exact path="/boards/:id" component={BoardDetail} />
+              <Route exact path="/boards" component={Boards} />
               <Route
                 exact
                 path="/boards/:id/lis"
