@@ -19,10 +19,11 @@ const Login = () => {
       },
       body: JSON.stringify(user),
     });
-    let res =await response.json()
-    let token = res.tokens
+    let res = await response.json();
+    let token = res.tokens;
     console.log(token);
-    let deserialized = 
+    let  deserialized = token.replace(/'/g, '"');
+    console.log(deserialized);
   };
   return (
     <div>
@@ -40,5 +41,5 @@ const Login = () => {
       </form>
     </div>
   );
-}
-export default Login
+};
+export default Login;
