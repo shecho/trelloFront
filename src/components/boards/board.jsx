@@ -9,7 +9,7 @@ const Board = (props) => {
   const addTofavorites = async () => {
     // console.log("adding to favorites");
     let url = `http://127.0.0.1:8000/boards/${id}/`;
-    let data = {favorite:[...props.board.favorite, 3]}
+    let data = {favorite:[...props.board.favorite, 2]}
     console.log(data);
     let res = await fetch(url, {
       method: "PATCH",
