@@ -10,8 +10,8 @@ const Login = () => {
   };
   const loginUser = async (e) => {
     e.preventDefault();
-    let url = `/login`;
-    // console.log(url);
+    let url = `http://localhost:8000/users/login/`;
+    console.log(user);
     let response = await fetch(url, {
       method: "POST",
       headers: {
@@ -19,7 +19,11 @@ const Login = () => {
       },
       body: JSON.stringify(user),
     });
-    console.log(response);
+    let res = await response.json();
+    let token = res.tokens;
+    console.log(token);
+    let  deserialized = token.replace(/'/g, '"');
+    console.log(deserialized);
   };
   return (
     <div>
@@ -37,5 +41,5 @@ const Login = () => {
       </form>
     </div>
   );
-}
-export default Login
+};
+export default Login;
